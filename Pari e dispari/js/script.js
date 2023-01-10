@@ -8,6 +8,10 @@ console.log('HI, I am java and I am working fine');
 // 5. Verifichiamo se la somma dei numeri è pari o dispari
 // 6. Dichiariamo chi ha vinto
 
+//Creazione box per elementi html
+let pcScore = document.getElementById('pc_score');
+let userScore = document.getElementById('user_score');
+let sumScore = document.getElementById('sum_score');
 
 // Collegamento con i bottoni:
 
@@ -60,10 +64,57 @@ pari.addEventListener('click', function() {
 
     let somma = parseInt(utentePari + pcUser);
     console.log('Somma dei numeri', somma, typeof somma)
+    let sommaVerified = pariODispari(somma);
+
+    pcScore.innerHTML += pcUser;
+    userScore.innerHTML += utentePari;
+    sumScore.innerHTML += somma;
+
+    if (sommaVerified == 'pari') {
+
+        alert('HAI VINTO');
+  
+     } else {
+       
+       alert('HAI PERSO')
+     }
     
    }
 
-
-
-
 })
+
+
+ // Crezione evento se utente sceglie DISPARI
+
+ dispari.addEventListener('click', function() {
+ 
+    alert('Sei il giocatore Dispari');
+    let utenteDispari = parseInt(prompt('Inserisci un numero da 1-5'));
+ 
+    if (isNaN(utenteDispari)) {
+     
+       alert('Numero inserito errato')
+ 
+    }  else {
+ 
+     let somma = parseInt(utenteDispari + pcUser);
+     console.log('Somma dei numeri', somma, typeof somma)
+     let sommaVerified = pariODispari(somma);
+
+     pcScore.innerHTML += pcUser;
+     userScore.innerHTML += utenteDispari;
+     sumScore.innerHTML += somma;
+ 
+     if (sommaVerified == 'dispari') {
+ 
+         alert('HAI VINTO');
+   
+      } else {
+        
+        alert('HAI PERSO')
+        
+      }
+     
+    }
+ 
+ })

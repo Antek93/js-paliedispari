@@ -6,6 +6,59 @@
     box-sizing: border-box;
 }
 
-.ciao {
-    background-color: red;
+body {
+    background-color: black;
+    color: #25e225;
+}
+
+.container {
+
+    width: 350px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+    font-size: 28px;
+    text-align: center;
+}
+
+.box {
+    width: 350px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 30%;
+    left: 50%;
+
+}
+
+h1 {
+    margin: 10px 10px 60px 10px;
+    text-align: center;
+}
+
+#pari {
+    font-size: 50px;
+    padding: 14px;
+    border-radius: 10px;
+    border-color: #deeb08;
+    background-color: #21d421;
+    color: #ffffff;
+}
+
+#dispari {
+    font-size: 50px;
+    padding: 14px;
+    border-radius: 10px;
+    margin-left: 37px;
+    border-color: #deeb08;
+    background-color: #21d421;
+    color: #ffffff;
+}
+
+.fa-solid,
+.fa-regular {
+    font-size: 20px;
+    padding-left: 2px;
+    color: white;
+
 }
